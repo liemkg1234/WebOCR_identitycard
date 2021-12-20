@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Web Trích Xuất Thông Tin CMND</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<style>
+table tr td {
+  width: 500px;
+  padding: 50px;
+}
+img {
+    width: 350px;
+    height: 420px;
+}
+table {
+  border-spacing: 100px;
+}
+</style>
+</head>
+<body>
+<p><h1 align="center">Web Trích Xuất Thông Tin CMND (OCR)</h1></p>
+<p><h1>             </h1></p>
+<div class="container">
+<div class="row">
+
+    <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </p>
+
+    <form method="post" action="/" enctype="multipart/form-data">
+        <table><tr>
+            <td>
+                <h2>Chọn ảnh để nhận dạng</h2>
+
+
+
+                {% if filename %}
+                    <div class = "img_uploads" >
+                        <img src="{{ url_for('display_image', filename=filename) }}">
+                    </div>
+                {% endif %}
+        <dl>
+            <p>
+                <input type="file" name="file" class="form-control" autocomplete="off" required>
+            </p>
+        </dl>
+        <p>
+            <h5>Lưu ý: </h5>
+            <h10>- Ảnh là mặt trước CMND, đủ 4 góc</h10><br>
+            <h10>- Ảnh càng rõ thì độ chính xác sẽ càng tốt</h10><br>
+            <input type="submit" value="Nhận dạng" class="btn btn-info">
+        </p>
+            </td>
+            <td style="vertical-align:top; width: 800px;">
+                {% if filename %}
+                <div class = "informaton" >
+                    <h2>Kết quả:</h2>
+                    <p><h3>Số CMND: {{ id }}</h3></p>
+                    <p><h3>Họ và tên: {{ name }}</h3></p>
+                    <p><h3>Ngày sinh: {{ birth }}</h3></p>
+                    <p><h3>Quê quán: {{ home }}</h3></p>
+                    <p><h3>Địa chỉ: {{ add }}</h3></p>
+                </div>
+                {% endif %}
+            </td>
+        </tr></table>
+    </form>
+</div>
+</div>
+</body>
+</html>
