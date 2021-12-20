@@ -5,6 +5,7 @@ Trong project này, mình xây dựng các mô hình nhận diện bằng YOLOv5
 - [YOLOv5](https://github.com/ultralytics/yolov5)
 - [VietOCR](https://github.com/pbcquoc/vietocr)
 - [LabelImg](https://github.com/tzutalin/labelImg)
+
 **Môi trường**
 - [Google Colaboratory](https://research.google.com/colaboratory/)
 
