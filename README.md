@@ -1,4 +1,4 @@
-# Website nhận diện và trích xuất thông tin từ Chứng Minh Nhân Dân (OCR_identitycard)
+# Website nhận diện và trích xuất thông tin từ Chứng Minh Nhân Dân
 Trong project này, mình xây dựng các mô hình nhận diện bằng YOLOv5 và dùng mô hình TransformerOCR để trích xuất thông tin, ngoài ra áp dụng thêm các phương pháp căn chỉnh và tiền xử lý ảnh để tăng độ chính xác khi nhận diện và trích xuất. Cuối cùng mình xây dựng website bằng Flask và ngrok để người dùng cuối có thể sử dụng chức năng trích xuất.
 
 **Các thư viện sử dụng**
