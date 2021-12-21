@@ -15,16 +15,17 @@ Trong project này, mình xây dựng các mô hình nhận diện bằng YOLOv5
 
 ## Thiết kế và cài đặt
 
-**Sơ đồ tổng quát**
+### Sơ đồ tổng quát
 ![samples](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/sodo1.png)
-**Tập dữ liệu**
+### Tập dữ liệu
+
 Tập dữ liệu của các mô hình là mặt trước của CMND, mình thu thập được 280 ảnh tương ứng với 28 người khác nhau. Ảnh thỏa mãn các điều kiền như: được chụp ở nhiều góc với nhiều kích thước khác nhau, độ phân phải của ảnh có thể cao hoặc thấp, ảnh bị mất góc. ảnh bị lóe sáng hoặc thiếu sáng, khung nền của ảnh phải khác nhau, ... 
 Mình chia tập dữ liệu thành 3 phần:
 train: 16 người
 val: 8 người
 test: 4 người
 Do tính bảo mật của khách hàng nên mình xin phép không chia sẽ tập dữ liệu.
-**Cropper**
+### Cropper
 - Huấn luyện mô hình nhận diện 4 góc (model_crop.pt):
 ```
 !python train.py --img 640 --batch 8 --epochs 250 --data coco128.yaml --weights yolov5x.pt
@@ -55,9 +56,9 @@ def CropImg(result,result_pandas,img):
   crop = perspective_transoform(img, source_points)
   return crop
 ```
-**Detector**
+### Detector
 
-**Reader**
+### Reader
 
 ## Kiểm thử và đánh giá
 
