@@ -5,9 +5,13 @@ Trong project này, mình xây dựng các mô hình nhận diện bằng YOLOv5
 - [YOLOv5](https://github.com/ultralytics/yolov5)
 - [VietOCR](https://github.com/pbcquoc/vietocr)
 - [LabelImg](https://github.com/tzutalin/labelImg)
+- [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+- [pyngrok](https://pypi.org/project/pyngrok/)
 
 **Môi trường**
 - [Google Colaboratory](https://research.google.com/colaboratory/)
+- Python 3.7.12
+- CUDA Version: 11.2
 
 ## Thiết kế và cài đặt
 
