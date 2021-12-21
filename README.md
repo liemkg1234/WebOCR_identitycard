@@ -172,4 +172,7 @@ def OCR(result, result_pandas, img, detector):
 | Dự đoán đúng  | 24  | 5  |
 | Dự đoán sai  | 2  | 5  |
 | Không dự đoán  | 0  | 4  |
+
+### Trang web
+![Web](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/web.jpg)
 ## Tổng kết
