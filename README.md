@@ -30,7 +30,7 @@ Trong đồ án lần này, mình xây dựng các mô hình nhận diện bằn
 
 Tập dữ liệu của các mô hình là mặt trước của CMND, mình thu thập được 280 ảnh tương ứng với 28 người khác nhau. Ảnh thỏa mãn các điều kiền như: được chụp ở nhiều góc với nhiều kích thước khác nhau, độ phân phải của ảnh có thể cao hoặc thấp, ảnh bị mất góc. ảnh bị lóe sáng hoặc thiếu sáng, khung nền của ảnh phải khác nhau, ... Mình chia tập dữ liệu thành 3 phần (train: 16 người, val: 8 người, test: 4 người)
 
-Do tính bảo mật của khách hàng nên mình xin phép không chia sẽ tập dữ liệu.
+Do tính bảo mật của khách hàng nên mình xin phép không chia sẻ tập dữ liệu.
 ### Cropper
 **Huấn luyện mô hình nhận diện 4 góc (model_crop.pt):**
 ```
