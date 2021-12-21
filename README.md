@@ -177,5 +177,5 @@ def OCR(result, result_pandas, img, detector):
 ![IMGProcessing](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/img_processing.jpg)
 
 ### Liên hệ
-Email: [liemkg1234@gmail.com](mailto: liemkg1234@gmail.com)
+Email:  liemkg1234@gmail.com
 
