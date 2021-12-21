@@ -12,7 +12,15 @@ Trong đồ án lần này, mình xây dựng các mô hình nhận diện bằn
 - [Google Colaboratory](https://research.google.com/colaboratory/)
 - Python 3.7.12
 - CUDA Version: 11.2
-
+**Clone source code**
+```
+!sudo apt-get install git-lfs
+!git lfs install
+```
+```
+%cd /content/drive/My Drive/test
+!git clone https://github.com/liemkg1234/WebOCR_identitycard.git
+```
 ## THIẾT KẾ VÀ CÀI ĐẶT
 
 ### Sơ đồ tổng quát
