@@ -13,7 +13,7 @@ Trong project này, mình xây dựng các mô hình nhận diện bằng YOLOv5
 - Python 3.7.12
 - CUDA Version: 11.2
 
-## Thiết kế và cài đặt
+## THIẾT KẾ VÀ CÀI ĐẶT
 
 ### Sơ đồ tổng quát
 ![samples](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/sodo1.png)
@@ -151,7 +151,7 @@ def OCR(result, result_pandas, img, detector):
     return dic
 ```
 ![Reader](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/reader.jpg)
-## Kiểm thử và đánh giá
+## KIỂM THỬ VÀ ĐÁNH GIÁ
 ### Kết quả trên tập test của tập dữ liệu 
 **Cropper**
 |   | Nhóm ảnh tốt | Nhóm ảnh xấu |
@@ -175,4 +175,7 @@ def OCR(result, result_pandas, img, detector):
 
 ### Trang web
 ![Web](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/web.jpg)
-## Tổng kết
+## NHẬN XÉT
+- Tập dữ liệu quá ít để huấn luyện các mô hình nhận diện
+- Tiền xử lý ảnh trước khi trích xuất chưa tối ưu, khiến kết quả trích xuất giảm độ chính xác
+
