@@ -57,10 +57,12 @@ def CropImg(result,result_pandas,img):
   crop = perspective_transoform(img, source_points)
   return crop
 ```
+![cropper](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/cropper.jpg)
 ### Detector
 
+![Detector](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/detector.jpg)
 ### Reader
-
+![Reader](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/reader.jpg)
 ## Kiểm thử và đánh giá
 
 ## Tổng kết
