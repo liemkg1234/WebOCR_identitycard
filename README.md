@@ -12,7 +12,7 @@ Trong project này, mình xây dựng các mô hình nhận diện bằng YOLOv5
 ## Thiết kế và cài đặt
 
 **Sơ đồ tổng quát**
-
+![samples](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/sodo1.png)
 **Tập dữ liệu**
 
 **Cropper**
