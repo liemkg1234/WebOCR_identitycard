@@ -59,9 +59,97 @@ def CropImg(result,result_pandas,img):
 ```
 ![cropper](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/cropper.jpg)
 ### Detector
-
+**Huấn luyện mô hình nhận diện thông tin (model_detect.pt):**
+```
+!python train.py --img 640 --batch 8 --epochs 70 --data crop.yaml --weights yolov5l.pt
+```
 ![Detector](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/detector.jpg)
 ### Reader
+**Tiền xử lý ảnh**
+```
+def Img_Processing(img):
+    # Rescale the image, if needed.
+    img = cv2.resize(img, None, fx=1.5, fy=1.5, interpolation=cv2.INTER_CUBIC)
+    # Converting to gray scale
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    #Removing Shadows
+    rgb_planes = cv2.split(img)
+    result_planes = []
+    result_norm_planes = []
+    for plane in rgb_planes:
+        dilated_img = cv2.dilate(plane, np.ones((7,7), np.uint8))
+        bg_img = cv2.medianBlur(dilated_img, 21)
+        diff_img = 255 - cv2.absdiff(plane, bg_img)
+        result_planes.append(diff_img)
+    img = cv2.merge(result_planes)
+    #Apply dilation and erosion to remove some noise
+    kernel = np.ones((1, 1), np.uint8)
+    img = cv2.dilate(img, kernel, iterations=1)#increases the white region in the image
+    img = cv2.erode(img, kernel, iterations=1) #erodes away the boundaries of foreground object
+    # Apply blur to smooth out the edges
+    img = cv2.GaussianBlur(img, (5, 5), 0)
+    # Can bang do sang va do tuong phan
+    img, alpha, beta = automatic_brightness_and_contrast(img,1)
+    return img
+```
+**OCR**
+```
+def OCR(result, result_pandas, img, detector):
+    if len(result) == 0:  # Loai truong hop khong tim duoc gi
+        return None
+    # 1. input overlap (Tensor 4*4, labels)
+    # Tensor
+    tensor = torch.tensor([])
+    for i in range(len(result)):
+        tensor_i = result[i][0:4].reshape(1, 4)
+        tensor = torch.cat((tensor, tensor_i), 0)
+    # Label
+    label = list(result_pandas['name'])
+    # 2. Overlap
+    final_boxes, final_labels = non_max_suppression_fast(tensor.numpy(), label, 0.3)
+    # print(final_boxes)
+    # print(final_labels)
+    dic = dict()  # luu tru thong tin
+    y = 0  ## Luu vi tri y max
+    # 3. Crop Imgaes trong box
+    for i in range(len(final_boxes)):
+        xmin = final_boxes[i][0]
+        ymin = final_boxes[i][1]
+        xmax = final_boxes[i][2]
+        ymax = final_boxes[i][3]
+        point = [xmax - xmin, ymax - ymin]
+        source_points = np.float32([[xmin, ymin],  # [[xmin,ymin] [xmax,ymin], [xmin,ymax],[xmax,ymax]]
+                                    [xmax, ymin],
+                                    [xmin, ymax],
+                                    [xmax, ymax]])
+
+        new_img = perspective_transoform(img, source_points, point)  # Cat anh cua tung box
+        # print(final_labels[i])
+
+        # 4. Image Processing
+        new_img = Img_Processing(new_img)
+
+        # 5. Predict thong tin #######################
+        new_img = Image.fromarray(new_img)
+        information = detector.predict(new_img)  # Predict duoc thong tin
+        # print(information)
+        if final_labels[i] in dic:
+            if ymax > y:
+                string = dic[final_labels[i]] + ", " + information
+                # print(string)
+                dic[final_labels[i]] = string
+                y = ymax
+            else:
+                string = information + ", " + dic[final_labels[i]]
+                # print(string)
+                dic[final_labels[i]] = string
+
+        else:
+            dic[final_labels[i]] = information
+            y = ymax
+
+    return dic
+```
 ![Reader](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/reader.jpg)
 ## Kiểm thử và đánh giá
 
