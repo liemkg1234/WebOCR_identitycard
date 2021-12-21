@@ -24,6 +24,7 @@ Mình chia tập dữ liệu thành 3 phần:
 train: 16 người
 val: 8 người
 test: 4 người
+
 Do tính bảo mật của khách hàng nên mình xin phép không chia sẽ tập dữ liệu.
 ### Cropper
 - Huấn luyện mô hình nhận diện 4 góc (model_crop.pt):
