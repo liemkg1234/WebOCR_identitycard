@@ -159,7 +159,10 @@ def OCR(result, result_pandas, img, detector):
 | 2. Key information extraction  | CER: 0.23   | 2     |  1.5s |
 
 **Cropper**
-|  | **Nhóm ảnh tốt** | **Nhóm ảnh xấu** |
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 
 
 ## Tổng kết
