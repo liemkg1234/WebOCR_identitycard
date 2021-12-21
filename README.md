@@ -158,6 +158,10 @@ def OCR(result, result_pandas, img, detector):
 | ------------- | ------------- | ------------- |
 | Căn chỉnh  | 26  | 10  |
 | Không căn chỉnh  | 0  | 4  |
-
-
+**Detector**
+|   | Nhóm ảnh tốt | Nhóm ảnh xấu |
+| ------------- | ------------- | ------------- |
+| Cắt hết  | 26  | 10  |
+| Cắt thiếu  | 0  | 0  |
+| Không cắt  | 0  | 4  |
 ## Tổng kết
