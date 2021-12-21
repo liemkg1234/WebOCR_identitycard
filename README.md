@@ -178,4 +178,4 @@ def OCR(result, result_pandas, img, detector):
 ## NHẬN XÉT
 - Tập dữ liệu quá ít để huấn luyện các mô hình nhận diện
 - Tiền xử lý ảnh trước khi trích xuất chưa tối ưu, khiến kết quả trích xuất giảm độ chính xác
-![IMGProcessing](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/img_processing.jpg 100x20)
+![IMGProcessing](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/img_processing.jpg =100x20)
