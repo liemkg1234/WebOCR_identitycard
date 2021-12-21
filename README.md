@@ -27,11 +27,11 @@ test: 4 người
 
 Do tính bảo mật của khách hàng nên mình xin phép không chia sẽ tập dữ liệu.
 ### Cropper
-- Huấn luyện mô hình nhận diện 4 góc (model_crop.pt):
+**Huấn luyện mô hình nhận diện 4 góc (model_crop.pt):**
 ```
 !python train.py --img 640 --batch 8 --epochs 250 --data coco128.yaml --weights yolov5x.pt
 ```
-- Căn chỉnh hình ảnh:
+**Căn chỉnh hình ảnh:**
 ```
 def CropImg(result,result_pandas,img):
   #1. input overlap (Tensor 4*4, labels)
