@@ -153,16 +153,11 @@ def OCR(result, result_pandas, img, detector):
 ![Reader](https://github.com/liemkg1234/WebOCR_identitycard/blob/master/image/reader.jpg)
 ## Kiểm thử và đánh giá
 ### Kết quả trên tập test của tập dữ liệu 
-| **Task** |  **Score** |  **Top** | **Speed** |
-| ------- | --------- | -------- | --------- |
-| 1. Quality evaluation  | RMSE: 0.12   | 3     | 2ms (GPU) |
-| 2. Key information extraction  | CER: 0.23   | 2     |  1.5s |
-
 **Cropper**
 |   | Nhóm ảnh tốt | Nhóm ảnh xấu |
 | ------------- | ------------- | ------------- |
-| Căn chỉnh  | Content Cell  | Content Cell  |
-| Khộng căn chỉnh  | Content Cell  | Content Cell  |
+| Căn chỉnh  | 26  | 10  |
+| Không căn chỉnh  | 0  | 4  |
 
 
 ## Tổng kết
