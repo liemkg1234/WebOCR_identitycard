@@ -84,8 +84,8 @@ def Img_Processing(img):
     img = cv2.merge(result_planes)
     #Apply dilation and erosion to remove some noise
     kernel = np.ones((1, 1), np.uint8)
-    img = cv2.dilate(img, kernel, iterations=1)#increases the white region in the image
-    img = cv2.erode(img, kernel, iterations=1) #erodes away the boundaries of foreground object
+    img = cv2.dilate(img, kernel, iterations=1)
+    img = cv2.erode(img, kernel, iterations=1) 
     # Apply blur to smooth out the edges
     img = cv2.GaussianBlur(img, (5, 5), 0)
     # Can bang do sang va do tuong phan
