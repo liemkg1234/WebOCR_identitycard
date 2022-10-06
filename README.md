@@ -29,6 +29,8 @@ Tải xuống [tại đây](https://drive.google.com/file/d/1TPV9PUf9sE08eXMT1tT
 
 **Yêu cầu**
 
+Tạo tài khoản [ngrok](https://ngrok.com/) và tạo token(https://dashboard.ngrok.com/get-started/your-authtoken) để connect với server ngrok
+
 ## THIẾT KẾ VÀ CÀI ĐẶT
 
 ### Sơ đồ tổng quát
