@@ -22,6 +22,9 @@ Trong đồ án lần này, mình xây dựng các mô hình nhận diện bằn
 %cd /content/drive/My Drive/test
 !git clone https://github.com/liemkg1234/WebOCR_identitycard.git
 ```
+
+**link model trained** [click](https://drive.google.com/file/d/1TPV9PUf9sE08eXMT1tThOGexftMziNan/view?usp=sharing)
+
 ## THIẾT KẾ VÀ CÀI ĐẶT
 
 ### Sơ đồ tổng quát
