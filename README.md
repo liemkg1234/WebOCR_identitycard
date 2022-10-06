@@ -24,7 +24,9 @@ Trong đồ án lần này, mình xây dựng các mô hình nhận diện bằn
 ```
 
 **Mô hình đã huấn luyện được**
+
 Tải xuống [tại đây](https://drive.google.com/file/d/1TPV9PUf9sE08eXMT1tThOGexftMziNan/view?usp=sharing) [app/templates/model/]
+
 **Yêu cầu**
 
 ## THIẾT KẾ VÀ CÀI ĐẶT
