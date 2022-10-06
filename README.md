@@ -23,7 +23,7 @@ Trong đồ án lần này, mình xây dựng các mô hình nhận diện bằn
 !git clone https://github.com/liemkg1234/WebOCR_identitycard.git
 ```
 
-**link model trained** [click](https://drive.google.com/file/d/1TPV9PUf9sE08eXMT1tThOGexftMziNan/view?usp=sharing)
+**Mô hình đã huấn luyện được** [tải xuống tại đây](https://drive.google.com/file/d/1TPV9PUf9sE08eXMT1tThOGexftMziNan/view?usp=sharing) [app/templates/model/]
 
 ## THIẾT KẾ VÀ CÀI ĐẶT
 
